@@ -8,11 +8,13 @@ import de.unbound.TestGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.vSyncEnabled = true;
-		config.backgroundFPS = 12;
-		config.foregroundFPS = 60;
-		config.width = 1280;
-		config.height = 900;
+		config.useGL30 = true;
+		config.useHDPI = true;
+		config.width = 800;
+		config.height = 600;
+		config.title = "Unbound";
+		config.resizable = false;
+		
 		new LwjglApplication(new TestGame(), config);
 	}
 }
